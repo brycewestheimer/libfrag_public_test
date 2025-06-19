@@ -1,0 +1,14 @@
+include README.rst
+include LICENSE.txt
+include requirements.txt
+include CMakeLists.txt
+include libfrag.pc.in
+include libfragConfig.cmake.in
+recursive-include include *.hpp
+recursive-include cmake *
+recursive-include docs *
+recursive-include examples *
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude .git*
+global-exclude build/*

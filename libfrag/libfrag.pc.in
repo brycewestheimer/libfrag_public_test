@@ -1,0 +1,8 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+includedir=${prefix}/include
+
+Name: libfrag
+Description: A modern C++ library for quantum chemistry fragment-based calculations
+Version: @libfrag_VERSION@
+Cflags: -I${includedir}

@@ -1,0 +1,51 @@
+package:
+  name: libfrag
+  version: 0.1.0
+
+source:
+  path: ../
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - cmake>=3.1
+    - conda-forge::xtl
+    - conda-forge::xtensor
+    - python>=3.6
+    - numpy>=1.16
+    - conda-forge::pybind11
+    - conda-forge::xtensor-python
+    
+  run:
+    - numpy>=1.16
+    - python>=3.6
+    
+test:
+  requires:
+    - pytest
+  imports:
+    - libfrag
+  
+  commands:
+    - test -d ${PREFIX}/include/libfrag           # [unix]
+    - test -f ${PREFIX}/include/libfrag/libfrag.hpp # [unix]
+    - if exist %LIBRARY_PREFIX%\include\libfrag\libfrag.hpp (exit 0) else (exit 1)  # [win]
+    # - make cpp-test
+    # -  make python-test
+
+about:
+  home:  https://github.com/brycewestheimer/libfrag
+  license: MIT
+  license_family: MIT
+  
+  summary: 'libfrag is a modern C++ library'
+  description: 'libfrag is a modern C++ library'
+  documentation_url: https://readthedocs.org/projects/libfrag/
+  dev_url: https://github.com/brycewestheimer/libfrag
+
+extra:
+  recipe-maintainers:
+    - Bryce Westheimer
+

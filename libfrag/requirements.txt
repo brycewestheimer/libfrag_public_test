@@ -1,0 +1,7 @@
+numpy>=1.19.0
+pybind11>=2.6.0
+# Quantum chemistry packages for compatibility
+qcelemental>=0.25.0
+qcengine>=0.25.0
+# Optional but recommended
+scipy>=1.7.0
